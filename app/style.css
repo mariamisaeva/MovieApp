@@ -1,0 +1,157 @@
+* {
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(22, 30, 43);
+    font-family: Arial, sans-serif;
+}
+
+.appTitle {
+    color: #ff9d00;
+    position: absolute;
+    top: 3%;
+
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    width: 90%;
+    height: 40%;
+}
+
+#searchBox {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, #f06d01dc, #ff9d00);
+    /* linear-gradient(45deg, #FFA500, #ff7b00);*/
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+#searchInput {
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(78, 78, 78, 0.558);
+}
+
+#searchInput::placeholder {
+    color: rgba(239, 237, 235, 0.475);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: rgba(78, 78, 78, 0.558);
+}
+
+button:hover {
+    filter: brightness(80%);
+}
+
+.err {
+    color: #ff08008f;
+}
+
+#resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+    width: 100%;
+}
+
+.resultCard {
+    width: calc(25% - 20px);
+    height: 450px;
+    margin: 10px;
+    padding: 2px 2px 10px 2px;
+    box-sizing: border-box;
+    background-color: #ffffff10;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(150, 151, 143, 0.803);
+}
+
+.resultImg {
+    width: 100%;
+    height: 90%;
+}
+
+.infoDiv {
+    width: 100%;
+    height: 10%;
+    color: #ff9d00cf;
+    font-size: 15px;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+}
+
+.infoDiv p {
+    font-size: 10px;
+
+}
+
+#totalResults {
+    color: green;
+    position: absolute;
+    top: 27%;
+    left: 5px;
+}
+
+
+@media (max-width: 1200px) {
+    .resultCard {
+        width: calc(33.33% - 20px);
+        height: 400;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .resultCard {
+        width: calc(50% - 20px);
+        height: 350px;
+    }
+
+    .infoDiv {
+        font-size: 10px;
+    }
+
+    .infoDiv p {
+        display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .resultCard {
+        width: calc(100% - 30px);
+        height: 300px;
+    }
+}

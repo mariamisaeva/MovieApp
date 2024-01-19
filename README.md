@@ -17,7 +17,7 @@ To get started you need to have Node.js installed on your machine. You can downl
 2. Navigate into the directory: `cd MovieApp`
 3. Open <http://localhost> in your browser to see the app running.
 
-## How it works
+## How It Works
 
 Searches the movie database for movies matching the given search term. Returns an array of movie objects with properties : title, poster, year, and type. with the total number of results.
 If no matches are found, not relevant input, or no input, returns an error message.

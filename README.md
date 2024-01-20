@@ -21,3 +21,5 @@ If no matches are found, not relevant input, or no input, returns an error messa
 All responses return JSON data.
 
 ## Screenshots
+
+<img width="1656" alt="Screenshot 2024-01-20 at 21 44 05" src="https://github.com/mariamisaeva/MovieApp/assets/142991068/a0c517f7-8a05-4713-b61c-8decb6d82734">

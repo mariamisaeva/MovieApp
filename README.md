@@ -24,7 +24,11 @@ All responses return JSON data.
 
 <img width="1658" alt="Screenshot 2024-01-20 at 21 51 28" src="https://github.com/mariamisaeva/MovieApp/assets/142991068/35bd3097-61c2-467c-b33a-0bebbf99468c">
 
+
+
 <img width="1651" alt="Screenshot 2024-01-20 at 21 53 49" src="https://github.com/mariamisaeva/MovieApp/assets/142991068/d54239e1-91b7-43d6-a819-afe8eec92ef0">
+
+
 
 <img width="1652" alt="Screenshot 2024-01-20 at 21 54 04" src="https://github.com/mariamisaeva/MovieApp/assets/142991068/31e63d8b-3203-4795-b2b8-6bbbb9896a0d">
 

@@ -136,7 +136,7 @@ function main() {
                 const randomizeMovies = data.Search.sort(() => Math.random() - 0.5);
 
                 // Select the first four movies
-                const randomMovies = randomizeMovies.slice(0, 3);
+                const randomMovies = randomizeMovies.slice(0, 4);
                 renderResults(randomMovies);
 
             }

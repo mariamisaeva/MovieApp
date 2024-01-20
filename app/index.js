@@ -30,12 +30,19 @@ async function fetchAndSearchUserInput() {
     const inputValue = document.getElementById('searchInput').value.toLowerCase().trim();
     container.style.transform = 'translateY(-30%)';
 
+    const totalResults = document.getElementById('totalResults');
+
+    if (totalResults) {
+        clearOldResults();
+    }
+    document.getElementById('searchInput').value = '';
+
+
     try {
 
         if (!inputValue) {
             renderError('Enter a keyword');
             setTimeout(() => {
-                secs
                 clearError();
             }, 1500);
             return;
@@ -48,6 +55,7 @@ async function fetchAndSearchUserInput() {
             renderTotalRes(data.totalResults);
         } else {
             renderError('Results Not Found');
+            clearOldResults();
         }
 
     } catch (err) {
@@ -87,11 +95,16 @@ function renderResults(results) {
 function renderTotalRes(totalResults) {
     const container = document.getElementById('container');
     const totalResContainer = document.createElement('div');
-
     totalResContainer.id = "totalResults";
     totalResContainer.innerHTML = `<p>Total Result: ${totalResults}</p>`
 
     container.appendChild(totalResContainer);
+}
+
+
+function clearTotalRes() {
+    const totalResults = document.getElementById('totalResults');
+    totalResults.innerHTML = '';
 }
 
 
@@ -106,19 +119,50 @@ function clearError() {
     resultsContainer.innerHTML = '';
 }
 
-
-function main() {
-    fetchData('');
+function clearOldResults() {
+    const totalResults = document.getElementById('totalResults');
+    totalResults.innerHTML = '';
 }
 
 
+function main() {
+
+
+    async function showNewestMovies() {
+        try {
+            const data = await fetchData('movie');
+
+            if (data.Response === 'True') {
+                const randomizeMovies = data.Search.sort(() => Math.random() - 0.5);
+
+                // Select the first four movies
+                const randomMovies = randomizeMovies.slice(0, 3);
+                renderResults(randomMovies);
+
+            }
+
+        } catch (err) {
+            console.error('Search Error: ');
+            throw err;
+        }
+    }
+    showNewestMovies();
 
 
 
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
 
-const searchBtn = document.getElementById('searchBtn');
+    searchBtn.addEventListener('click', fetchAndSearchUserInput);
+    searchInput.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') {
+            fetchAndSearchUserInput();
+        }
+    });
 
-searchBtn.addEventListener('click', fetchAndSearchUserInput);
+}
+
+
 window.addEventListener('load', main);
 
 

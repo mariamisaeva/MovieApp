@@ -2,6 +2,7 @@
     margin: 2px;
     padding: 2px;
     box-sizing: border-box;
+
 }
 
 body {
@@ -12,6 +13,12 @@ body {
     height: 100vh;
     background-color: rgb(22, 30, 43);
     font-family: Arial, sans-serif;
+
+    background-image: url('https://img.freepik.com/vrije-photo/uitzicht-op-3d-wasberen-in-de-bioscoop-die-een-film-kijken_23-2151067008.jpg?w=2000&t=st=1705781622~exp=1705782222~hmac=2b0b102da2732c0d0ab77fd45cee826a2692661f3f26ccfbb98f90d01738e497');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .appTitle {
@@ -73,7 +80,7 @@ button:hover {
 }
 
 .err {
-    color: #ff08008f;
+    color: #ff0800b3;
 }
 
 #resultsContainer {

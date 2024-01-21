@@ -12,7 +12,8 @@ The API used is <http://www.omdbapi.com/>
 
 1. Clone or Download the repository: `git clone https://github.com/mariamisaeva/MovieApp.git`
 2. Navigate into the directory: `cd MovieApp`
-3. Open <http://localhost> in your browser to see the app running.
+3. Run index.html file.
+4. Open <http://localhost> in your browser to see the app running.
 
 ## How It Works
 

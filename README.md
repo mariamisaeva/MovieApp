@@ -31,6 +31,12 @@ Searches the movie database for movies matching the given search term. Returns a
 If no matches are found, not relevant input, or no input, returns an error message.
 All responses return JSON data.
 
+## Features 
+
+. Dynamic rendering of movie search results.
+. Display of total search results.
+. Error handling for unsuccessful API calls.
+
 ## Screenshots
 
 <img width="1658" alt="Screenshot 2024-01-20 at 21 51 28" src="https://github.com/mariamisaeva/MovieApp/assets/142991068/35bd3097-61c2-467c-b33a-0bebbf99468c">

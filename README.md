@@ -33,9 +33,9 @@ All responses return JSON data.
 
 ## Features 
 
-. Dynamic rendering of movie search results.
-. Display of total search results.
-. Error handling for unsuccessful API calls.
+- Dynamic rendering of movie search results.
+- Display of total search results.
+- Error handling for unsuccessful API calls.
 
 ## Screenshots
 

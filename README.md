@@ -12,8 +12,18 @@ The API used is <http://www.omdbapi.com/>
 
 1. Clone or Download the repository: `git clone https://github.com/mariamisaeva/MovieApp.git`
 2. Navigate into the directory: `cd MovieApp`
-3. Run index.html file.
-4. Open <http://localhost> in your browser to see the app running.
+3. Open the index.html file in your preferred web browser.
+4. Enter a keyword in the search input and click the "Search" button to retrieve movie results.
+5. Alternatively, you can open http://localhost in your browser to see the app running.
+
+## Adding Your API Key
+
+Follow these steps to add your API key to the code:
+1. Get an API key from OMDb API.
+2. Open the "index.js" file in the js directory.
+3. Replace the value of API_KEY with your own API key:
+   const API_KEY = `your_api_key_here`;
+
 
 ## How It Works
 

@@ -19,7 +19,7 @@ The API used is <http://www.omdbapi.com/>
 ## Adding Your API Key
 
 Follow these steps to add your API key to the code:
-1. Get an API key from OMDb API.
+1. Get an API key from [OMDb API](http://www.omdbapi.com/).
 2. Open the `index.js` file in the js directory.
 3. Replace the value of API_KEY with your own API key:
    > const API_KEY = `your_api_key_here`;

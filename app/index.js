@@ -1,12 +1,15 @@
 'use strict'
 
-const API_KEY = `1baa3467`;
-const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
-
+const API_KEY = prompt(`Enter your OMDB API key`);
 
 async function fetchData(keyword) {
 
     try {
+        if (!API_KEY) {
+
+            console.error('API key is required');
+            return;
+        }
 
         const url = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(keyword)}`;
         const response = await fetch(url);
@@ -19,7 +22,7 @@ async function fetchData(keyword) {
         return fetchedData;
 
     } catch (err) {
-        console.error('ERROR WITH API CALL');
+        console.error('ERROR WITH API CALL', err);
     }
 }
 
@@ -31,12 +34,10 @@ async function fetchAndSearchUserInput() {
     container.style.transform = 'translateY(-30%)';
 
     const totalResults = document.getElementById('totalResults');
-
     if (totalResults) {
         clearOldResults();
     }
     document.getElementById('searchInput').value = '';
-
 
     try {
 
@@ -121,21 +122,23 @@ function clearError() {
 
 function clearOldResults() {
     const totalResults = document.getElementById('totalResults');
-    totalResults.innerHTML = '';
+    totalResults.remove();
 }
 
 
 function main() {
 
-
     async function showNewestMovies() {
         try {
             const data = await fetchData('movie');
 
+            if (!data) {
+                return;
+            }
+
             if (data.Response === 'True') {
                 const randomizeMovies = data.Search.sort(() => Math.random() - 0.5);
 
-                // Select the first four movies
                 const randomMovies = randomizeMovies.slice(0, 4);
                 renderResults(randomMovies);
 
@@ -147,7 +150,6 @@ function main() {
         }
     }
     showNewestMovies();
-
 
 
     const searchBtn = document.getElementById('searchBtn');
@@ -162,7 +164,4 @@ function main() {
 
 }
 
-
 window.addEventListener('load', main);
-
-

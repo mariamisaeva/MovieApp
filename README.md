@@ -19,7 +19,7 @@ The API used is <http://www.omdbapi.com/>
 ## Adding Your API Key
 
 Follow these steps to add your API key to the code:
-1. Get an API key from [OMDb API](http://(http://www.omdbapi.com/apikey.aspx).
+1. Get an API key from [OMDb API](http://www.omdbapi.com/apikey.aspx).
 2. Open the `index.html` file in your browser.
 3. Enter your own API key in prompt box.
 4. Press Ok.

@@ -1,7 +1,7 @@
 'use strict'
 
-const API_KEY = prompt(`Enter your OMDB API key`);
-
+//const API_KEY = prompt(`Enter your OMDB API key`);
+const API_KEY = `1baa3467`;
 async function fetchData(keyword) {
 
     try {
@@ -165,3 +165,14 @@ function main() {
 }
 
 window.addEventListener('load', main);
+
+
+// DELETE IT (TESTING)
+function sum(a, b) {
+    return a + b;
+}
+
+module.exports = {
+    sum,
+    fetchData,
+};

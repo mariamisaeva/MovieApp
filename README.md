@@ -4,7 +4,7 @@ API-Project
 
 # Introduction
 
-This project is an Movie App recommendation application. It allows users to search movies by title
+This project is a Movie App recommendation application. It allows users to search movies by title
 or genre, and retrieve information about the movies that match their query.
 The API used is <http://www.omdbapi.com/>
 
